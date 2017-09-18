@@ -1,0 +1,40 @@
+spring:
+    application:
+        name: zuul
+    cloud:
+        config:
+            discovery:
+                enabled: true
+                serviceId: configuration-service
+server:
+    context-path: /zuul
+    port: 8888
+
+zuul:
+  ignoredServices: '*'
+  routes:
+    employee:
+      path: /employee/**
+      sensitiveHeaders: Cookie,Set-Cookie
+      serviceId: employee-service
+    config:
+      path: /config/**
+      serviceId: CONFIGURATION-SERVICE
+---
+spring:
+    profile: consul
+    cloud:
+        consul:
+            host: localhost
+            port: 8500
+            discovery:
+                register: true
+            config:
+                format: YAML
+---
+spring:
+    profile: local
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8800/eureka/

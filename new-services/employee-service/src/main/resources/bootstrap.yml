@@ -1,0 +1,55 @@
+spring:
+    application:
+        name: employee-service
+    jpa:
+        hibernate:
+            ddl-auto: create-drop
+    cloud:
+        config:
+            uri: http://localhost:8840
+            discovery:
+                enabled: true
+                serviceId: configuration-service
+        vault:
+            token: 7ab3106c-405d-822b-931b-d9b35d3fa019
+            host: localhost
+            port: 8200
+            scheme: http
+    redis:
+        host: localhost
+        password: secret
+        port: 6379
+server:
+    port: 8850
+management:
+  security:
+    enabled: false
+---
+spring:
+    profile: consul
+    cloud:
+        consul:
+            host: localhost
+            port: 8500
+            discovery:
+                register: true
+                healthCheckPath: ${management.context-path}/health
+                healthCheckInterval: 15s
+            config:
+                format: YAML
+    redis:
+        host: localhost
+        password: secret
+        port: 6379
+---
+spring:
+    profile: eureka
+management:
+  context-path: /admin
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8800/eureka/
+  instance:
+    status-page-url-path: ${management.context-path}/info
+    health-check-url-path: ${management.context-path}/health

@@ -1,0 +1,23 @@
+<h3>Employee Summary</h3>
+<div class="addEmployee">
+    <button ng-click="addEmployee()">+ Add Employee</button>
+</div>
+
+<table id="employeeSummary">
+    <tr>
+        <th>Full Name</th>
+        <th>Logon ID</th>
+        <th>Active?</th>
+        <th>Actions</th>
+    </tr>
+    <tr ng-repeat="employee in employees">
+        <td>{{employee.lastName + ', ' + employee.firstName + ' ' + (employee.middleInitial != null ? employee.middleInitial : '')}}</td>
+        <td>{{employee.logonId}}</td>
+        <td>{{employee.terminationDate === null}}</td>
+        <td><a ng-if="employee.id != null" href="#!/details/{{employee.id}}">view</a><i class="grey" ng-if="employee.id == null">legacy</i></td>
+    </tr>
+</table>
+
+<div class="addEmployee">
+    <button ng-click="addEmployee()">+ Add Employee</button>
+</div>

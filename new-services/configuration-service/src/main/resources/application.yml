@@ -1,0 +1,33 @@
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+      server:
+        git:
+          uri: git@bitbucket.org:efm_it/cloud-demo.git
+          search-paths: configuration
+        native:
+#          search-locations: file://${HOME}/workspace/efm/cloud-demo/configuration
+          search-locations: file://${user.home}/workspace/spring-cloud-bootstrap/configuration
+  application:
+    name: configuration-service
+server:
+  port: 8840
+management:
+  security:
+    enabled: false
+---
+spring:
+  profile: consul
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+---
+spring:
+  profile: eureka
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8800/eureka/

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="eemApp">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <link href="/assests/css/app.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Enterprise Employee Management</h1>
+        </div>
+
+        <div ng-view></div>
+
+        <script src="webapp/libs/angular/angular.min.js"></script>
+        <script src="webapp/libs/angular-route/angular-route.min.js"></script>
+        <script src="app.js"></script>
+        <script src="modules/config/configService.js"></script>
+        <script src="services/employeeService.js"></script>
+        <script src="directives/employeeInfo.js"></script>
+        <script src="views/summary/summaryController.js"></script>
+        <script src="views/details/detailsController.js"></script>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+<h2>Employee Details</h2>
+<div full-info employee="employee"></div>
+<button ng-click="fireEmployee()" ng-disabled="employee.terminationDate != null">Terminate Employee</button>
+
+<h3>Manager</h3>
+<div full-info employee="employee.manager"></div>
+<!--
+<h3>Direct Reports</h3>
+<div ng-repeat="dr in employee.directReports" full-info employee="dr"></div>
+-->

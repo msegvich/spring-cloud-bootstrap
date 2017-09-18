@@ -1,0 +1,38 @@
+---
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  profiles: vault
+---
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  profiles: local
+employee:
+  datasource:
+    url: jdbc:h2:file:~/h2/employee_db;DB_CLOSE_ON_EXIT=TRUE
+    username: sa
+    password: 
+    driver-class-name: org.h2.Driver
+---
+spring:
+  jpa:
+    database: MYSQL
+    show-sql: false
+  profiles: dev
+employee:
+  datasource:
+    url: jdbc:mysql://poc2msql.cluster-cssphmnz6bgj.us-east-2.rds.amazonaws.com:3306/poc2msql
+    username: cloud_demo
+    password: ptDVIwL#ROdi5D5e06rSZ
+    driver-class-name: com.mysql.jdbc.Driver
+---
+legacy_user_host: localhost
+legacy_user_port: 8060
+legacy_user_ws_path: /cloud-demo/ws
+legacy_user_endpoint: http://${legacy_user_host}:${legacy_user_port}${legacy_user_ws_path}
+legacy_user_schema: http://efleets.com/cloud/schema/UserPort

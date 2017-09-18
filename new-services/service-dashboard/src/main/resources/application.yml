@@ -1,0 +1,7 @@
+info:
+  component: Turbine
+
+turbine:
+  clusterNameExpression: new String("default")
+  appConfig: EMPLOYEE-SERVICE, LEGACY-ADAPTER
+  instanceUrlSuffix: admin/hystrix.stream

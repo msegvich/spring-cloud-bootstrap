@@ -1,0 +1,1 @@
+zuulEndpoint: http://localhost:8888/zuul/employee/employee

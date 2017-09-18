@@ -1,0 +1,8 @@
+server:
+  contextPath: /cloud-demo
+      
+---
+info:
+    app:
+       name: cloud-demo
+       description: EFM Cloud Discovery Demo

@@ -1,0 +1,12 @@
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: = create-drop
+  profiles: local
+employee:
+  datasource:
+    url: jdbc:h2:file:~/h2/employee_db;DB_CLOSE_ON_EXIT=TRUE
+    username: sa
+    password: 
+    driver-class-name: org.h2.Driver

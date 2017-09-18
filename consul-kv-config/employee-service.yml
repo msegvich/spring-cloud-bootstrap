@@ -1,0 +1,5 @@
+legacy_user_host: localhost
+legacy_user_port: 8080
+legacy_user_ws_path: /cloud-demo/ws
+legacy_user_endpoint: http://${legacy_user_host}:${legacy_user_port}${legacy_user_ws_path}
+legacy_user_schema: http://efleets.com/cloud/schema/UserPort

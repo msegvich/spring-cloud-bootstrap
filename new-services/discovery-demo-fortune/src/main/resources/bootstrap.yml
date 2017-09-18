@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: fortune
+  cloud:
+    config:
+      uri: http://localhost:8840

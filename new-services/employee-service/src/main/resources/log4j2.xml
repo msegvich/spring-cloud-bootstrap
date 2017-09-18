@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="${sys:LOG_LEVEL}" name="batch-print-manager" packages="com.efleets">
+	<Appenders>
+		<Console name="STDOUT" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d %p %c [%t] %m%n" />
+		</Console>
+		<File name="logFile" fileName="${sys:LOG_PATH}/log4j.log">
+			<PatternLayout>
+				<Pattern>%d %p %c [%t] %m%n</Pattern>
+			</PatternLayout>
+		</File>
+	</Appenders>
+	<Loggers>
+		<Logger name="com.efleets" level="${sys:LOG_LEVEL}" additivity="false">
+			<AppenderRef ref="STDOUT" />
+			<AppenderRef ref="logFile" />
+		</Logger>
+		<Root level="info">
+			<AppenderRef ref="STDOUT" />
+			<AppenderRef ref="logFile" />
+		</Root>
+	</Loggers>
+</Configuration>

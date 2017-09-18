@@ -1,0 +1,11 @@
+spring:
+  jpa:
+    database: MYSQL
+    show-sql: false
+  profiles: dev
+employee:
+  datasource:
+    url: jdbc:mysql://poc2msql.cluster-cssphmnz6bgj.us-east-2.rds.amazonaws.com:3306/poc2msql
+    username: cloud_demo
+    password: ptDVIwL#ROdi5D5e06rSZ
+    driver-class-name: com.mysql.jdbc.Driver

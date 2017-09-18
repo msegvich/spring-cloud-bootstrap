@@ -1,0 +1,13 @@
+server:
+  port: 8800
+eureka:
+  instance:
+    hostname: localhost
+    status-page-url-path: ${management.contextPath}/info
+    health-check-url-path: ${management.contextPath}/health
+  # only for dev - consider moving to a profile and config server
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl:
+          defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

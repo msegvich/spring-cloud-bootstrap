@@ -1,0 +1,3 @@
+employeeService:
+  # uri: http://localhost:8850/new-services/employee
+  servicePath: /employee

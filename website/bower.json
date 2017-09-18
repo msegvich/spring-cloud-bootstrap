@@ -1,0 +1,12 @@
+{
+  "name": "EFM Employee Example",
+  "description": "Example Web UI for cloud services",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.6.4",
+    "angular-route": "~1.6.4",
+    "angular-loader": "~1.6.4",
+    "angular-mocks": "~1.6.4"
+  }
+}

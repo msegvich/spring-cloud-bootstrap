@@ -1,0 +1,9 @@
+---
+management:
+  context-path: /admin
+---
+spring:
+  profile: eureka
+---
+spring:
+  profile: consul

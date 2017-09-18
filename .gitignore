@@ -1,0 +1,79 @@
+# ------------------------------------------------------------------------------ #
+# Java defaults (https://github.com/github/gitignore/blob/master/Java.gitignore) #
+# ------------------------------------------------------------------------------ #
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+**/build
+
+# ------------------------------------------------------------------------------------------- #
+# Eclipse-specific (https://github.com/github/gitignore/blob/master/Global/Eclipse.gitignore) #
+# ------------------------------------------------------------------------------------------- #
+*.pydevproject
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+# You may want to remove the sharp symbols here if you are using Maven
+.project
+.classpath
+.mymetadata
+
+# ignore gradle
+.gradle/
+
+# ignore clover
+.clover/
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# CDT-specific
+.cproject
+
+# PDT-specific
+.buildpath
+
+# --------------- #
+# Studio-specific #
+# --------------- #
+.studio/
+flows/
+target/
+**/*.mflow
+
+# Ignore third party client libraries
+fleetweb-web/src/main/webapp/include/thirdParty/**/*.*
+fleetweb-uat/bin/
+
+bin/
+junit*.properties
+
+*.log
+hibernate.ct.cfg.xml
+/bin
+
+# --------------- #
+# Mac             #
+# --------------- #
+**/.idea
+**/.DS_Store
+
+website/node_modules/*
+website/src/webapp/libs/*
+
+# Ignore Batch for now until cleaned up
+batch/

@@ -1,0 +1,6 @@
+zuul:
+  ignoredServices: '*'
+  routes:
+    employee: 
+      path: /employee/**
+      serviceId: employee-service
