@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema targetNamespace="http://efleets.com/cloud/schema" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
-	xmlns="http://efleets.com/cloud/schema">
+<xs:schema targetNamespace="http://slalom.com/cloud/schema" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+	xmlns="http://slalom.com/cloud/schema">
 
 	<xs:element name="createUserRequest">
 		<xs:complexType>

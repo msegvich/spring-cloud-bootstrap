@@ -1,4 +1,4 @@
 employeeService:
   uri: http://employee-service
   servicePath: /employee
-adapterService: resttemplate
+adapterService: feign
