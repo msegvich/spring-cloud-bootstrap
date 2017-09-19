@@ -1,6 +1,6 @@
 # Cloud Demo
-
-# Implementations
+This is an example implementation of the Strangler Pattern.  Please see the 
+[Reference Architecture for Strangling Legacy Applications Confluence page] (https://slalom.atlassian.net/wiki/spaces/CNC/pages/231243854/Reference+Architecture+for+Strangling+Legacy+Applications), for more information.
 
 By default Eureka is being used, but this can be changed by changing the class dependencies in each
 project's build.gradle file.
