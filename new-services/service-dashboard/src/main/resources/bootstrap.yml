@@ -7,5 +7,17 @@ spring:
 management:
   security:
     enabled: false
+---
+spring:
+    profile: eureka
 server:
     port: 9000
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8800/eureka/
+  instance:
+    status-page-url-path: ${management.context-path}/info
+    health-check-url-path: ${management.context-path}/health
+management:
+  context-path: /admin

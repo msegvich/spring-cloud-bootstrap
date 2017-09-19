@@ -5,10 +5,9 @@ spring:
         enabled: true
       server:
         git:
-          uri: git@bitbucket.org:efm_it/cloud-demo.git
+          uri: git@bitbucket.org:slalom-consulting/spring-cloud-bootstrap.git
           search-paths: configuration
         native:
-#          search-locations: file://${HOME}/workspace/efm/cloud-demo/configuration
           search-locations: file://${user.home}/workspace/spring-cloud-bootstrap/configuration
   application:
     name: configuration-service

@@ -14,6 +14,8 @@ management:
 hystrix:
   stream:
     maxConcurrentConnections: 20
+legacy:
+  service-name: EMPLOYEE-SERVICE
 ---
 spring:
   profile: consul
